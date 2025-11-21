@@ -28,7 +28,8 @@
      - 각 모델 × 시나리오 별 fold metrics CSV/PNG,
        전체 요약 CSV 저장.
        
-"""
+```
+
 Usage 예시:
 
   - 1. 데이터 생성
@@ -60,7 +61,7 @@ Usage 예시:
       --data-dir data \
       --max-drop 3 \
       --use_gpu --gpu_id 1
-"""
+```
 
 
 ## result.csv
@@ -94,3 +95,4 @@ GPU 이용 학습실행
 
 
 최대 3개 feature에 대해서만 ablation 실횅 
+
