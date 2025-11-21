@@ -4,24 +4,29 @@
    
 - 모드:
   1) generate_data
+     
      - Kagglehub 또는 --data_path 로 받은 OULAD raw CSV를 이용해
        우리가 쓰는 feature 테이블을 만들어 parquet 로 저장.
      - 출력: <data-dir>/processed/oulad_features.parquet
     
-   2) baseline
+   3) baseline
+      
      - feature 제거 없이 baseline feature 셋으로
        아래 6개 모델 성능 측정:
+       
          - LogisticRegression
          - RandomForest
          - GradientBoosting
          - ExtraTrees
          - KNN
          - XGBoost (옵션으로 GPU)
+         - 
      - GroupKFold(id_student) 5-fold
      - 각 모델 × 시나리오(=baseline 1개) 별 fold metrics CSV/PNG,
        전체 요약 CSV 저장.
 
    3) ablation
+      
      - baseline과 동일한 6개 모델 사용
      - 여러 feature 제거 조합으로 ablation (max_drop까지)
      - GroupKFold(id_student) 5-fold
@@ -95,4 +100,5 @@ GPU 이용 학습실행
 
 
 최대 3개 feature에 대해서만 ablation 실횅 
+
 
